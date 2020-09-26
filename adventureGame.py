@@ -2,23 +2,9 @@ import time
 import sys
 import random
 
-# disable output buffering
-class Unbuffered(object):
-   def __init__(self, stream):
-       self.stream = stream
-   def write(self, data):
-       self.stream.write(data)
-       self.stream.flush()
-   def writelines(self, datas):
-       self.stream.writelines(datas)
-       self.stream.flush()
-   def __getattr__(self, attr):
-       return getattr(self.stream, attr)
-sys.stdout = Unbuffered(sys.stdout)
-
 def sleepPrint(message):
     time.sleep(2)
-    print(message)
+    print(message, flush=True)
 
 def rollDice():
     return random.randint(1,3)
