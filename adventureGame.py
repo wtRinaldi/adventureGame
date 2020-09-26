@@ -29,7 +29,7 @@ def getFirstChoice ():
         getCaveResults()
     elif firstChoice == "2":
         getTrailResults()
-    else: 
+    else:
         getFirstChoice()
 
 def getCaveResults ():
@@ -59,7 +59,7 @@ def playAgain ():
         playGame()
     elif restart == "2":
         sleepPrint("Bye Bye")
-    else: 
+    else:
         playAgain()
 
 def playGame ():
